@@ -15,11 +15,11 @@ public class MainMenu {
         System.out.println("=-----------------------------=");
         System.out.println("=----Wtaj w  Pogodynce--------=");
         System.out.println("=----1 Aktualna pogoda--------=");
-        System.out.println("=----2 Pogoda z zeszłych 5 dni=");
-        System.out.println("=----3 Pogoda na przyszle 5 dni");
-        while(!Pattern.matches("[123]", Integer.toString(numberMenu))) {
+        System.out.println("=----2 Pogoda na przyszle 5 dni");
+        System.out.println("=----0 Koniec programu--------=");
+         do{
             numberMenu = Integer.parseInt(scanner.nextLine());
-        }
+        }while(!Pattern.matches("[012]", Integer.toString(numberMenu)));
     }
 
     public String getCityFromUser() {
