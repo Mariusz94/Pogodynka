@@ -2,3 +2,15 @@
 2018-03-05T16:24:23.829     WeatherModel{cityName='Krakow', temperature=277, pressure=1002, humidity=51, clouds=0, weatherComment='Clear'}
 2018-03-05T16:24:51.427     WeatherModel{cityName='Krakow', temperature=277, pressure=1002, humidity=51, clouds=0, weatherComment='Clear'}
 2018-03-05T16:25:00.169     WeatherModel{cityName='Krakow', temperature=277, pressure=1002, humidity=51, clouds=0, weatherComment='Clear'}
+2018-03-05T16:42:30.993     WeatherModel{cityName='Krakow', temperature=277, pressure=1002, humidity=51, clouds=0, weatherComment='Clear'}
+2018-03-05T16:45:14.948     WeatherModel{cityName='krakow', temperature=277, pressure=1002, humidity=51, clouds=0, weatherComment='Clear'}
+2018-03-05T16:48:56.306     WeatherModel{cityName='lublin', temperature=270, pressure=991, humidity=92, clouds=32, weatherComment='Clouds'}
+2018-03-06T09:59:08.731     WeatherModel{cityName='krakow', temperature=275, pressure=996, humidity=69, clouds=92, weatherComment='Clouds', dt_txt='null'}
+2018-03-06T09:59:37.724     WeatherModel{cityName='Krakow', temperature=265, pressure=951, humidity=68, clouds=0, weatherComment='Clear', dt_txt='2018-03-06 21:00:00'}
+2018-03-06T09:59:37.724     WeatherModel{cityName='Krakow', temperature=274, pressure=958, humidity=91, clouds=56, weatherComment='Clouds', dt_txt='2018-03-07 21:00:00'}
+2018-03-06T09:59:37.724     WeatherModel{cityName='Krakow', temperature=269, pressure=968, humidity=82, clouds=36, weatherComment='Clouds', dt_txt='2018-03-08 21:00:00'}
+2018-03-06T09:59:37.724     WeatherModel{cityName='Krakow', temperature=275, pressure=968, humidity=89, clouds=80, weatherComment='Rain', dt_txt='2018-03-09 21:00:00'}
+2018-03-06T09:59:37.724     WeatherModel{cityName='Krakow', temperature=272, pressure=964, humidity=83, clouds=0, weatherComment='Clear', dt_txt='2018-03-10 21:00:00'}
+2018-03-06T10:01:08.754     WeatherModel{cityName='Krakow', temperature=275, pressure=996, humidity=69, clouds=92, weatherComment='Clouds', dt_txt='null'}
+2018-03-06T19:40:05.608     WeatherModel{cityName='krakow', temperature=276, pressure=992, humidity=93, clouds=75, weatherComment='Mist', dt_txt='null'}
+2018-03-06T19:41:20.720     WeatherModel{cityName='Krakow', temperature=3, pressure=992, humidity=93, clouds=75, weatherComment='Mist', dt_txt='null'}

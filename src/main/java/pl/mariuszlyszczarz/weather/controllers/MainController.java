@@ -1,29 +1,50 @@
 package pl.mariuszlyszczarz.weather.controllers;
 
 import pl.mariuszlyszczarz.weather.models.SaveToFile;
+import pl.mariuszlyszczarz.weather.models.services.ForNext5DaysWeather;
 import pl.mariuszlyszczarz.weather.models.services.WeatherService;
 import pl.mariuszlyszczarz.weather.views.MainMenu;
-import sun.applet.Main;
 
 public class MainController {
     private WeatherService weatherService = WeatherService.getInstance();
+    private ForNext5DaysWeather forNext5DaysWeather = ForNext5DaysWeather.getInstance();
     private SaveToFile saveToFile;
+    private MainMenu mainMenu;
+    private String result;
+    private String city;
 
     public MainController() {
         saveToFile = new SaveToFile();
+        mainMenu = new MainMenu();
     }
 
     public void run() {
         //todo test
-        System.out.println(weatherService.getWeather("Kraków"));
+        while (true) {
+            mainMenu.printMenu();
 
-        MainMenu mainMenu = new MainMenu();
-        mainMenu.printMenu();
+            WeatherService weatherService = WeatherService.getInstance();
+            city = mainMenu.getCityFromUser();
+            if (city.equals("exit")) break;
+            switch (mainMenu.getNumberMenu()) {
+                case 1:
+                    result = weatherService.getWeather(city).toString();
+                    printAndSave();
+                    break;
+                case 2:
 
-        WeatherService weatherService = WeatherService.getInstance();
-        String city = mainMenu.getCityFromUser();
-        String result = weatherService.getWeather(city).toString();
+                    break;
+                case 3:
+                    for (int i = 4; i < 39; i += 8) {
+                        result = forNext5DaysWeather.getWeather(city, i).toString();
+                        printAndSave();
+                    }
+                    break;
+            }
+        }
+    }
 
+    public void printAndSave() {
         System.out.println(result);
 
         saveToFile.saveToFile(result, city);

@@ -7,6 +7,7 @@ public class WeatherModel {
     private int humidity;
     private int clouds;
     private String weatherComment;
+    private String dt_txt;
 
     private WeatherModel(Builder builder) {
         cityName = builder.getCityName();
@@ -15,6 +16,7 @@ public class WeatherModel {
         humidity =builder.getHumidity();
         clouds = builder.getClouds();
         weatherComment = builder.getWeatherComment();
+        dt_txt = builder.getDt_txt();
     }
 
 
@@ -66,6 +68,14 @@ public class WeatherModel {
         this.weatherComment = weatherComment;
     }
 
+    public String getDt_txt() {
+        return dt_txt;
+    }
+
+    public void setDt_txt(String dt_txt) {
+        this.dt_txt = dt_txt;
+    }
+
     @Override
     public String toString() {
         return "WeatherModel{" +
@@ -75,6 +85,7 @@ public class WeatherModel {
                 ", humidity=" + humidity +
                 ", clouds=" + clouds +
                 ", weatherComment='" + weatherComment + '\'' +
+                ", dt_txt='" + dt_txt + '\'' +
                 '}';
     }
 
@@ -85,6 +96,7 @@ public class WeatherModel {
         private int humidity;
         private int clouds;
         private String weatherComment;
+        private String dt_txt;
 
         public Builder(String cityName) {
             this.cityName = cityName;
@@ -114,6 +126,11 @@ public class WeatherModel {
             return this;
         }
 
+        public Builder setDt_txt(String dt_txt){
+            this.dt_txt = dt_txt;
+            return this;
+        }
+
         public String getCityName() {
             return cityName;
         }
@@ -136,6 +153,10 @@ public class WeatherModel {
 
         public String getWeatherComment() {
             return weatherComment;
+        }
+
+        public String getDt_txt(){
+            return dt_txt;
         }
 
         public WeatherModel build(){

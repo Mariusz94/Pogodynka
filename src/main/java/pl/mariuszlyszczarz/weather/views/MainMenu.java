@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 public class MainMenu {
     private Scanner scanner;
+    private int numberMenu;
 
     public MainMenu() {
         scanner = new Scanner(System.in);
@@ -13,6 +14,12 @@ public class MainMenu {
     public void printMenu() {
         System.out.println("=-----------------------------=");
         System.out.println("=----Wtaj w  Pogodynce--------=");
+        System.out.println("=----1 Aktualna pogoda--------=");
+        System.out.println("=----2 Pogoda z zeszłych 5 dni=");
+        System.out.println("=----3 Pogoda na przyszle 5 dni");
+        while(!Pattern.matches("[123]", Integer.toString(numberMenu))) {
+            numberMenu = Integer.parseInt(scanner.nextLine());
+        }
     }
 
     public String getCityFromUser() {
@@ -32,5 +39,9 @@ public class MainMenu {
 
     public void sendMessageToConsole(String message) {
         System.out.println(message);
+    }
+
+    public int getNumberMenu() {
+        return numberMenu;
     }
 }

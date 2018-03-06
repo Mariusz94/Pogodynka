@@ -5,8 +5,6 @@ import org.json.JSONObject;
 import pl.mariuszlyszczarz.weather.models.Utils;
 import pl.mariuszlyszczarz.weather.models.WeatherModel;
 
-import java.util.Arrays;
-
 public class WeatherService {
     private static WeatherService ourInstance = new WeatherService();
 
@@ -45,7 +43,7 @@ public class WeatherService {
                 .Builder(city)
                 .setClouds(clouds)
                 .setPressure(pressure)
-                .setTemperature(temperature)
+                .setTemperature(temperature-273)
                 .setWeatherComment(description)
                 .setHumidity(humidity)
                 .build();
